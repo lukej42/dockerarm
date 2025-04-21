@@ -37,7 +37,7 @@ stages:
         resourceGroupName: '$(rgName)'
         location: $(location)
         csmFile: '$(System.DefaultWorkingDirectory)/**/acr-temp-new.json'
-        overrideParameters: '-acrName "$(acrName)" -acrSku Standard'
+        overrideParameters: '-acrName "$(acrName)" -acrSku Basic'
     - task: Docker@1
       displayName: 'Build task'
       inputs:
