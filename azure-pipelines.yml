@@ -7,16 +7,16 @@ trigger:
 
 variables:
   buildConfiguration: 'Release'
-  location: 'eastus'
-  acrHostName: 'knoxdocker001acr.azurecr.io'
-  acrName: 'knoxdocker001acr'
-  rgName: 'knoxdocker001-rg'
-  containerName: 'knoxdocker001'
-  appName: 'knoxdocker001'
+  location: 'uksouth'
+  acrHostName: 'lukedocker001acr.azurecr.io'
+  acrName: 'lukedocker001acr'
+  rgName: 'dockercicd'
+  containerName: 'lukedocker001'
+  appName: 'lukedocker001'
   vmImageName: 'ubuntu-latest'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  appSvcPlanName: 'knoxdocksvcplan'
+  appSvcPlanName: 'lukedocksvcplan'
 
 resources:
 - repo: self
