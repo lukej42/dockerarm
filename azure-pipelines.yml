@@ -13,7 +13,7 @@ variables:
   rgName: 'dockercicd'
   containerName: 'lukedocker001'
   appName: 'lukedocker001'
-  vmImageName: 'ubuntu-latest'
+  vmImage: 'ubuntu-latest'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   appSvcPlanName: 'lukedocksvcplan'
@@ -28,7 +28,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      image: '$(vmImageName)'
+      image: '$(vmImage)'
     steps:
     - task: AzureResourceGroupDeployment@2
       displayName: 'Azure App Services Deployment'
