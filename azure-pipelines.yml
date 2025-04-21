@@ -31,7 +31,7 @@ stages:
       image: '$(vmImageName)'
     steps:
     - task: AzureResourceGroupDeployment@2
-      displayName: 'Azure App Service Deployment'
+      displayName: 'Azure App Services Deployment'
       inputs:
         azureSubscription: 'azureSrvcConn'
         resourceGroupName: '$(rgName)'
